@@ -5,7 +5,7 @@ export default function AppRenderer() {
     let { gid, id } = useParams();
 
     return (
-        <div className="container">
+        <div className="sidebar-container">
             <Sidebar />
         </div>
     );

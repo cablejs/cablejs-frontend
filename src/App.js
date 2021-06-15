@@ -1,5 +1,5 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import "react-bootstrap";
 
 import AppRenderer from "./AppRenderer";
 import Login from "./Login";
