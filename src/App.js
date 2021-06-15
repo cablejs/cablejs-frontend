@@ -1,11 +1,16 @@
 import "./App.css";
 import "react-bootstrap";
-import Sidebar from "./components/Sidebar";
+import AppRenderer from "./AppRenderer";
+import { Route, Switch } from "react-router-dom";
 
 export default function App() {
   return (
-    <div className="container">
-      <Sidebar />
-    </div>
+    <main>
+      <Switch>
+        <Route path="/channels/:gid/:id">
+          <AppRenderer />
+        </Route>
+      </Switch>
+    </main>
   )
 }
