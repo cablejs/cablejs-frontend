@@ -10,7 +10,7 @@ export default function App() {
   return (
     <main>
       <Switch>
-        <Route path="/">
+        <Route path="/" exact>
           <Redirect to="/login" />
         </Route>
         <Route path="/channels/:gid/:id">
