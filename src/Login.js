@@ -2,6 +2,11 @@ import { Container, Form, Button } from "react-bootstrap";
 import axios from "axios";
 
 export default function Login() {
+    const getCookie = key => {
+        var b = document.cookie.match("(^|;)\\s*" + key + "\\s*=\\s*([^;]+)");
+        return b ? b.pop() : "";
+    }
+
     const handleLogin = event => {
         event.preventDefault();
 

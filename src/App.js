@@ -1,3 +1,5 @@
+// Copyright (c) 2021 EmeraldSys Media Ltd. All rights reserved.
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
