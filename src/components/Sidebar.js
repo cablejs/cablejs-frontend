@@ -9,8 +9,6 @@ export default function Sidebar() {
                     <img src="https://emeraldsys.github.io/images/products/3132702-200-2.png" alt="CableJS Home" style={{ width: 35, height: 35, alignSelf: "center", margin: "0 auto" }} />
                 </div>
                 <div className="sidebarItem separator" />
-                <div className="sidebarItem guild-9a7A4c" />
-                <div className="sidebarItem guild-9a7A4c" />
             </nav>
         </div>
     );
