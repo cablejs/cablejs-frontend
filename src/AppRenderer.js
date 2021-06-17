@@ -12,12 +12,17 @@ function AppRenderer() {
 
         if (b)
         {
-            axios({
-                url: `https://api.cablejs.emeraldsys.xyz/v1/channels/${id}`,
-                headers: {
-                    Authorization: `Bearer ${b.pop()}`
-                }
-            }).then(res => console.log(res.status)).catch(err => console.error(err))
+            if (gid === "@me")
+            {
+                axios({
+                    url: "https://api.cablejs.emeraldsys.xyz/v1/users/@me",
+                    headers: {
+                        Authorization: `Bearer ${b.pop()}`
+                    }
+                }).then(res => console.log(res.status)).catch(err => {
+                    history.push("/login");
+                });
+            }
         }
         else
         {

@@ -15,6 +15,9 @@ export default function App() {
         <Route path="/" exact>
           <Redirect to="/login" />
         </Route>
+        <Route path="/channels/:gid">
+          <AppRenderer />
+        </Route>
         <Route path="/channels/:gid/:id">
           <AppRenderer />
         </Route>
