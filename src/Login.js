@@ -1,11 +1,11 @@
 import { Container, Form, Button } from "react-bootstrap";
 import axios from "axios";
+import Cookies from "universal-cookie";
+import { useHistory, withRouter } from "react-router-dom";
 
 export default function Login() {
-    const getCookie = key => {
-        var b = document.cookie.match("(^|;)\\s*" + key + "\\s*=\\s*([^;]+)");
-        return b ? b.pop() : "";
-    }
+    const cookies = new Cookies();
+    const history = useHistory();
 
     const handleLogin = event => {
         event.preventDefault();
@@ -22,13 +22,11 @@ export default function Login() {
             }
         })
         .then(res => {
-            console.log(res);
-            alert(res.status);
+            let parsedToken = JSON.parse(res.data).token;
+            cookies.set("cableAuth", parsedToken);
+            history.push("/channels/@me");
         })
-        .catch(err => {
-            console.log(err);
-            alert(err.status);
-        });
+        .catch(err => {});
     };
 
     return (
