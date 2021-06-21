@@ -4,7 +4,7 @@ import Sidebar from "./components/Sidebar";
 import axios from "axios";
 
 function AppRenderer() {
-    let { gid, id } = useParams();
+    let { gid } = useParams();
     let history = useHistory();
 
     useEffect(() => {

@@ -3,7 +3,7 @@ import axios from "axios";
 import Cookies from "universal-cookie";
 import { useHistory, withRouter } from "react-router-dom";
 
-export default function Login() {
+function Login() {
     const cookies = new Cookies();
     const history = useHistory();
 
@@ -49,3 +49,5 @@ export default function Login() {
         </Container>
     );
 }
+
+export default withRouter(Login);
