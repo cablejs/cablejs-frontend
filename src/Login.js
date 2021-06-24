@@ -22,7 +22,7 @@ function Login() {
             }
         })
         .then(res => {
-            let parsedToken = JSON.parse(res.data).token;
+            let parsedToken = res.data.token;
             cookies.set("cableAuth", parsedToken, { path: "/" });
             history.push("/channels/@me");
         })
