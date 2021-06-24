@@ -29,6 +29,8 @@ function Login() {
         .catch(err => {});
     };
 
+    if (cookies.get("cableAuth")) history.push("/channels/@me");
+
     return (
         <Container className="d-flex justify-content-center align-items-center">
             <Form onSubmit={handleLogin}>
