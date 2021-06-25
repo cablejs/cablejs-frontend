@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useParams, useHistory, withRouter } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import axios from "axios";
@@ -6,8 +6,6 @@ import axios from "axios";
 function AppRenderer() {
     let { gid } = useParams();
     let history = useHistory();
-
-    let [guilds, setGuilds] = useState({});
 
     useEffect(() => {
         var b = document.cookie.match("(^|;)\\s*cableAuth\\s*=\\s*([^;]+)");
