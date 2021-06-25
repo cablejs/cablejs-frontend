@@ -1,21 +1,25 @@
 import { useEffect } from "react";
 import { useParams, useHistory, withRouter } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
+
+import Cookies from "universal-cookie";
 import axios from "axios";
 
 function AppRenderer() {
     let { gid } = useParams();
     let history = useHistory();
 
-    useEffect(() => {
-        var b = document.cookie.match("(^|;)\\s*cableAuth\\s*=\\s*([^;]+)");
+    let cookies = new Cookies();
 
-        if (b)
+    useEffect(() => {
+        let cookie = cookies.get("cableAuth");
+
+        if (cookie)
         {
             axios({
                 url: "https://api.cablejs.emeraldsys.xyz/v1/users/@me/guilds",
                 headers: {
-                    Authorization: `Bearer ${b.pop()}`
+                    Authorization: `Bearer ${cookie}`
                 }
             }).then(res => {
                 res.data.forEach(guild => {
@@ -34,6 +38,7 @@ function AppRenderer() {
                     guildElementClick.appendChild(guildElementImg);
                 });
             }).catch(err => {
+                cookies.remove("cableAuth");
                 history.push("/login");
             });
         }
