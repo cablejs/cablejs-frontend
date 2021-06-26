@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Container, Form, Button } from "react-bootstrap";
 import axios from "axios";
 import Cookies from "universal-cookie";
@@ -28,6 +29,10 @@ function Login() {
         })
         .catch(err => {});
     };
+
+    useEffect(() => {
+        document.title = "CableJS";
+    });
 
     if (cookies.get("cableAuth")) history.push("/channels/@me");
 

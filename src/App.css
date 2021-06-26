@@ -1,14 +1,18 @@
 body {
-    background-color: #292880;
+    /* background-color: #292880; */
+    background-color: #161644;
     margin: 0;
     padding: 0;
+    border: 0;
 }
 
 div {
     display: block;
 }
 
-.container {
-    width: 100vw;
-    height: 100vh;
+.baseContainer {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
 }

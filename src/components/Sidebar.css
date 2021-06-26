@@ -1,16 +1,9 @@
-.sidebar-container {
-    width: 100vw;
-    height: 100vh;
-}
-
 .sideBar-As1F2d {
-    background-color: #161644;
     color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 60px;
-    height: 100%;
+    height: 100vh;
     display: flex;
-    position: relative;
     justify-content: center;
 }
 

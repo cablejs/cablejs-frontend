@@ -1,0 +1,27 @@
+.contentContainer-3ef014 {
+    background-color: #292880;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex: 1 1 auto;
+    flex-grow: 1;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+
+.contentSidebar {
+    display: flex;
+    padding: 10px;
+    color: rgb(58, 58, 141);
+    background-color: rgb(15, 15, 56);
+    width: 18vh;
+    height: 100vh;
+}
+
+.contentMain {
+    padding: 15px;
+    color: #fff;
+    display: flex;
+    position: absolute;
+    margin-left: 240px;
+}

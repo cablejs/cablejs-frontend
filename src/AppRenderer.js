@@ -1,9 +1,11 @@
 import { useEffect } from "react";
 import { useParams, useHistory, withRouter } from "react-router-dom";
-import Sidebar from "./components/Sidebar";
 
 import Cookies from "universal-cookie";
 import axios from "axios";
+
+import Sidebar from "./components/Sidebar";
+import Content from "./components/Content";
 
 function AppRenderer() {
     let { gid } = useParams();
@@ -12,6 +14,7 @@ function AppRenderer() {
     let cookies = new Cookies();
 
     useEffect(() => {
+        document.title = "CableJS";
         let cookie = cookies.get("cableAuth");
 
         if (cookie)
@@ -36,9 +39,21 @@ function AppRenderer() {
                     guildElementImg.className = "guildIcon";
                     guildElementImg.src = `https://cdn2.emeraldsys.xyz/cablejs/guilds/${guild.gid}/icons/${guild.iconHash}.png`;
                     guildElementClick.appendChild(guildElementImg);
+
+                    if (gid === "@me")
+                    {
+                        var contentIntroText = document.createElement("span");
+                        contentIntroText.className = "contentIntroText";
+                        contentIntroText.style.fontWeight = "bold";
+                        contentIntroText.style.fontSize = "20px";
+                        contentIntroText.innerText = "Welcome to CableJS, still in early development.";
+
+                        document.querySelector(".contentMain").appendChild(contentIntroText);
+                    }
                 });
             }).catch(err => {
                 cookies.remove("cableAuth");
+                if (err.response) alert(`An error occurred while fetching some info - API responded with status ${err.response.status}.`);
                 history.push("/login");
             });
         }
@@ -49,8 +64,9 @@ function AppRenderer() {
     });
 
     return (
-        <div className="sidebar-container">
+        <div className="baseContainer">
             <Sidebar />
+            <Content />
         </div>
     );
 }
