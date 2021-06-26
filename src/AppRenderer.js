@@ -29,28 +29,27 @@ function AppRenderer() {
                     var guildElement = document.createElement("div");
                     guildElement.className = "sidebarItem guild-9a7A4c";
                     document.querySelector(".guilds-8f20ea").appendChild(guildElement);
-
+        
                     var guildElementClick = document.createElement("a");
                     guildElementClick.className = "sidebarItem";
                     guildElementClick.href = `https://${window.location.hostname}/channels/${guild.gid}`;
                     guildElement.appendChild(guildElementClick);
-
+        
                     var guildElementImg = document.createElement("img");
                     guildElementImg.className = "guildIcon";
                     guildElementImg.src = `https://cdn2.emeraldsys.xyz/cablejs/guilds/${guild.gid}/icons/${guild.iconHash}.png`;
                     guildElementClick.appendChild(guildElementImg);
-
-                    if (gid === "@me")
-                    {
-                        var contentIntroText = document.createElement("span");
-                        contentIntroText.className = "contentIntroText";
-                        contentIntroText.style.fontWeight = "bold";
-                        contentIntroText.style.fontSize = "20px";
-                        contentIntroText.innerText = "Welcome to CableJS, still in early development.";
-
-                        document.querySelector(".contentMain").appendChild(contentIntroText);
-                    }
                 });
+                if (gid === "@me")
+                {
+                    var contentIntroText = document.createElement("span");
+                    contentIntroText.className = "contentIntroText";
+                    contentIntroText.style.fontWeight = "bold";
+                    contentIntroText.style.fontSize = "20px";
+                    contentIntroText.innerText = "Welcome to CableJS, still in early development.";
+
+                    document.querySelector(".contentMain").appendChild(contentIntroText);
+                }
             }).catch(err => {
                 cookies.remove("cableAuth");
                 if (err.response) alert(`An error occurred while fetching some info - API responded with status ${err.response.status}.`);
