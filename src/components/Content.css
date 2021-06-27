@@ -17,6 +17,10 @@
     height: 100vh;
 }
 
+.contentSidebarChannels {
+    background-color: rgb(42, 42, 82);
+}
+
 .contentSidebarTop {
     display: flex;
     padding: 16px;
@@ -24,10 +28,6 @@
     background-color: rgb(68, 68, 136);
     width: 18vh;
     height: 4vh;
-}
-
-.contentSidebarChannels {
-    background-color: rgb(42, 42, 82);
 }
 
 .contentSidebarChannel {
@@ -59,4 +59,29 @@
     display: flex;
     position: absolute;
     margin-left: 240px;
+}
+
+.contentChat {
+    color: #000;
+    background-color: rgb(58, 58, 133);
+    width: 121.8vh;
+    height: 97.5vh;
+}
+
+.contentChatMsgs {
+    width: 121.8vh;
+    height: 94.5vh;
+}
+
+.contentChatInput {
+    display: flex;
+    justify-content: center;
+}
+
+.contentChatInput > input {
+    border: 0;
+    color: #fff;
+    background-color: #505281;
+    width: 100%;
+    height: 3.5vh;
 }

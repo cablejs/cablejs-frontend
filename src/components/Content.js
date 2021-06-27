@@ -15,7 +15,14 @@ export default function Content() {
                     </div>
                 </nav>
             </div> */}
-            <div className="contentMain" />
+            <div className="contentMain">
+                {/* <div className="contentChat">
+                    <div className="contentChatMsgs" />
+                    <div className="contentChatInput">
+                        <input />
+                    </div>
+                </div> */}
+            </div>
         </div>
     );
 }
