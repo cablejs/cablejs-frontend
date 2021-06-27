@@ -15,10 +15,10 @@ export default function App() {
         <Route path="/" exact>
           <Redirect to="/login" />
         </Route>
-        <Route path="/channels/:gid">
+        <Route path="/channels/:gid" exact>
           <AppRenderer />
         </Route>
-        <Route path="/channels/:gid/:id">
+        <Route path="/channels/:gid/:cid" exact>
           <AppRenderer />
         </Route>
         <Route path="/login">

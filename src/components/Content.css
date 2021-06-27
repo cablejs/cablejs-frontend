@@ -11,12 +11,47 @@
 
 .contentSidebar {
     display: flex;
-    padding: 10px;
     color: rgb(58, 58, 141);
     background-color: rgb(15, 15, 56);
     width: 18vh;
     height: 100vh;
 }
+
+.contentSidebarTop {
+    display: flex;
+    padding: 16px;
+    color: #fff;
+    background-color: rgb(68, 68, 136);
+    width: 18vh;
+    height: 4vh;
+}
+
+.contentSidebarChannels {
+    background-color: rgb(42, 42, 82);
+}
+
+.contentSidebarChannel {
+    display: flex;
+    padding: 2px;
+    color: #fff;
+    border-radius: 5px;
+    margin: auto 5px 3px 5px;
+}
+
+.contentSidebarChannel:hover {
+    background-color: rgb(63, 63, 110);
+}
+
+.contentSidebarCName {
+    position: relative;
+    left: 10px;
+}
+
+.selected {
+    background-color: rgb(58, 58, 133);
+}
+
+/* */
 
 .contentMain {
     padding: 15px;
