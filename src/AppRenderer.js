@@ -119,20 +119,18 @@ function AppRenderer() {
                                 contentSidebarChannels.appendChild(contentSidebarSpacing);
 
                                 res3.data.forEach(guildChannel => {
+                                    var contentSidebarChannel = document.createElement("div");
+
                                     if (guildChannel.id === parseInt(cid))
                                     {
-                                        var contentSidebarChannel = document.createElement("div");
                                         contentSidebarChannel.className = "contentSidebarChannel selected";
-
-                                        contentSidebarChannels.appendChild(contentSidebarChannel);
                                     }
                                     else
                                     {
-                                        var contentSidebarChannel = document.createElement("div");
                                         contentSidebarChannel.className = "contentSidebarChannel";
-
-                                        contentSidebarChannels.appendChild(contentSidebarChannel);
                                     }
+
+                                    contentSidebarChannels.appendChild(contentSidebarChannel);
 
                                     var contentSidebarCName = document.createElement("div");
                                     contentSidebarCName.className = "contentSidebarCName";
