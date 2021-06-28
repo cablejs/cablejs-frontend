@@ -39,7 +39,9 @@ function Login() {
     return (
         <Container className="d-flex justify-content-center align-items-center">
             <Form onSubmit={handleLogin}>
-                <img src="https://emeraldsys.github.io/images/products/3132702-200-2.png" alt="CableJS" />
+                <div style={{ height: "20px" }} />
+                <img style={{ height: "70px" }} src="https://emeraldsys.github.io/images/products/3132702-200-2.png" alt="CableJS" />
+                <span style={{ color: "#fff", fontWeight: "bold", fontSize: "25px", marginLeft: "10px" }}>CableJS</span>
                 <br />
                 <br />
                 <Form.Group controlId="formUser">
