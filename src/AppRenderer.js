@@ -166,6 +166,7 @@ function AppRenderer() {
         <div className="baseContainer">
             <Sidebar />
             <Content />
+            <script src="https://cdn.socket.io/4.0.1/socket.io.js"></script>
         </div>
     );
 }
