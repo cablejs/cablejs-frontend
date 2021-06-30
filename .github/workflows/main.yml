@@ -1,4 +1,4 @@
-name: CI
+name: Frontend
 
 on:
   push:
@@ -8,6 +8,7 @@ on:
 
 jobs:
   build:
+    name: Build
     runs-on: ubuntu-latest
     env:
       CI: false
